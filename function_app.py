@@ -21,7 +21,7 @@ def trad01(req: func.HttpRequest) -> func.HttpResponse:
         installed_packages = pkg_resources.working_set
         installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
         for i in installed_packages])
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.  Packages: {installed_packages_list}")
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully. Packages: {installed_packages_list}")
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
